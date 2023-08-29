@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category   label="30000">
+      <setting label="30001" type="lsep" />
+      <setting label="30005" type="action" action="RunScript(special://home/addons/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/resources/remove-con.py)" />
+      <setting label="30006" type="action" action="RunScript(special://home/addons/docker.xyz.wolfiettech.dev.apps.kodi.addon.updater/resources/remove-img.py)" />
+   </category>
+</settings>

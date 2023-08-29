@@ -1,0 +1,18 @@
+[Unit]
+Description=$p container
+Requires=service.system.docker.service
+After=service.system.docker.service
+After=cron.service
+
+[Service]
+Restart=on-failure
+RestartSec=10
+StartLimitInterval=86400
+StartLimitBurst=3
+TimeoutStartSec=0
+RemainAfterExit=yes
+ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/%p
+ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/stop
+
+[Install]
+WantedBy=multi-user.target

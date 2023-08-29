@@ -1,0 +1,4 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.portainer/config" />
+    <setting id="P_port" value="9000" />
+</settings>

@@ -1,0 +1,30 @@
+#!/bin/sh
+
+name="updater"
+servicename="$(basename $0)"
+. /etc/profile
+
+oe_setup_addon "$servicename"
+
+# create lsio network
+if ! docker network list | grep -q wt-bridge; then
+  docker network create wt-bridge
+fi
+
+# create update.sh
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-update.sh ]; then
+  echo "#!/bin/sh" > /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-update.sh
+  chmod +x /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-update.sh
+fi
+
+# create prune.sh
+echo "#!/bin/sh" > /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-prune.sh
+echo "/storage/.kodi/addons/service.system.docker/bin/docker image prune -f" >> /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-prune.sh
+chmod +x /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-prune.sh
+
+
+# add update.sh & prune.sh to cron
+if ! grep -q 'docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-update.sh' /storage/.cache/cron/crontabs/root; then
+  echo '5 4 * * * /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-update.sh > /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-update.log && /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-prune.sh > /storage/.kodi/userdata/addon_data/docker.xyz.wolfietech.dev.apps.kodi.addon.updater/wt-prune.log' >> /storage/.cache/cron/crontabs/root
+  systemctl restart cron
+fi

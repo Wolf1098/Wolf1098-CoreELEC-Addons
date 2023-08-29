@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sed -i '/wt-update.sh/d' /storage/.cache/cron/crontabs/root
+sed -i '/wt-prune.sh/d' /storage/.cache/cron/crontabs/root
