@@ -23,8 +23,8 @@
             <disclaimer lang="en">Will be focused on Arm64v8 on the master branch</disclaimer>
             <platform>all</platform>
             <assets>
-                <icon>https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/icon.png</icon>
-                <fanart>https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/fanart.jpg</fanart>
+                <icon>https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/download/repository.xyz.wolfietech.dev.apps.kodi.corelec.addons/icon.png</icon>
+                <fanart>https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/download/repository.xyz.wolfietech.dev.apps.kodi.corelec.addons/fanart.jpg</fanart>
             </assets>
   </extension>
 </addon>
