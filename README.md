@@ -1,6 +1,6 @@
 # Wolf1098-CoreELEC-Addons
 
-<h3>To use add https://coreelec-addons-repo.dev.wolfietech.xyz to file sources in settings in file 
+<h3>To use <ins>try to</ins> add https://coreelec-addons-repo.dev.wolfietech.xyz to file sources in settings in file 
 manager, then go to addons, install from zip, select from the file source you added.</h3>
 
 # Attribution
