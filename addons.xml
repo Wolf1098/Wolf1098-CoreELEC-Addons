@@ -35,7 +35,7 @@
   <requires>
     <import addon="service.system.docker" version="0.9.0" />
     <import addon="xbmc.python" version="2.25.0" />
-    <import addon="docker.xyz.wolfietech.dev.apps.kodi.addon.updater" version="1.0.1">
+    <import addon="docker.xyz.wolfietech.dev.apps.kodi.addon.updater" version="1.0.1" />
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
