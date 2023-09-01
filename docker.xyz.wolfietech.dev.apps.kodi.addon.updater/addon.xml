@@ -67,7 +67,7 @@ docker.linuxserver.updater:
     <website>http://dev.wolfietech.xyz/</website>
     <assets>
         <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
+        <fanart>fanart.png</fanart>
     </assets>
   </extension>
 </addon>

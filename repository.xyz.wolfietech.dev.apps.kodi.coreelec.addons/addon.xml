@@ -14,6 +14,7 @@
       <info compressed="true">https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/addons.xml</info>
       <checksum>https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/addons.xml.md5</checksum>
       <datadir zip="true">https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/download/</datadir>
+      <hashes>false</hashes>
     </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
@@ -21,9 +22,12 @@
             <description lang="en">Wolf1098's Addon Repository for Arm64v8 Kodi</description>
             <disclaimer lang="en">Will be focused on Arm64v8 on the master branch</disclaimer>
             <platform>all</platform>
+            <news>
+            Initial release
+            </news>
             <assets>
-                <icon>https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/download/repository.xyz.wolfietech.dev.apps.kodi.corelec.addons/icon.png</icon>
-                <fanart>https://raw.githubusercontent.com/wolf1098/wolf1098-coreelec-addons/main/download/repository.xyz.wolfietech.dev.apps.kodi.corelec.addons/fanart.jpg</fanart>
+                <icon>icon.jpg</icon>
+                <fanart>fanart.png</fanart>
             </assets>
   </extension>
 </addon>
